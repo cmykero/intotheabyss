@@ -1,0 +1,87 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Universal*/
+.btn{
+    width: 100%;
+}
+/*NAV*/
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 50px;
+    background: #777;
+    position: fixed;
+}
+
+#navXP{
+    background: linear-gradient(to right, #7ac781 50%, #f87f73 50%); /*this get's dynamically changed*/
+    width: 100%;
+    height: 100%;
+    border: solid black;
+    border-width: 2px;
+}
+
+#navXP h3{
+    text-align: center;
+}
+
+#contentArea{
+    padding-top: 50px;
+    width: 100%;   
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li{
+    margin-left: 3em;
+    margin-bottom: 0;
+}
+
+
+/*FIGHT SCREEN*/
+#fightScreen{
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
+    visibility: hidden;
+    width: 100%;
+    background: #999;
+    height: 400px;
+}
+
+#fightLogDiv{
+    height: 100%;
+    background: #8b7573;
+    overflow:scroll;
+    overflow: hidden;
+}
+
+#fightScreen h1, p{
+    text-align: center;
+}
+
+
+#fightLog{
+    text-align: center;
+    list-style-type: none;
+}
+
+#attackBtn{
+    
+    position: relative;
+}
+
+@media screen and (min-width: 900px){
+    #contentArea{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
