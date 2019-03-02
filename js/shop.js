@@ -62,7 +62,7 @@ for (var i = 0; i < shopSectionBtn.length; i++) {
             if(selectedShopSection == "potions"){
                 itemInfo = Shop[selectedShopSection][i][0] + ": $" + Shop[selectedShopSection][i][1] + ", +" + Shop[selectedShopSection][i][2] + "hp";
             } else {
-                itemInfo = Shop[selectedShopSection][i][0];
+                itemInfo = Shop[selectedShopSection][i][0] + ": $" + Shop[selectedShopSection][i][1] + ", +" + Shop[selectedShopSection][i][2] + "atk";
             }
             
             
