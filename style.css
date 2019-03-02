@@ -5,7 +5,7 @@
 }
 
 /*Universal*/
-.btn{
+.btn, .areaBtn, .returnBtn, .shopSectionBtn, .itemBtn, .shopReturnBtn{
     width: 100%;
 }
 /*NAV*/
@@ -30,11 +30,6 @@ nav{
     text-align: center;
 }
 
-#contentArea{
-    padding-top: 50px;
-    width: 100%;   
-}
-
 nav ul{
     list-style-type: none;
     display: flex;
@@ -44,13 +39,20 @@ nav li{
     margin-left: 3em;
     margin-bottom: 0;
 }
+/*End Nav */
+
+#contentArea{
+    padding-top: 50px;
+    width: 100%;   
+}
+
+
 
 
 /*FIGHT SCREEN*/
 #fightScreen{
     display: grid;
-    grid-template-rows: 15% 75% 10%;
-    visibility: hidden;
+    grid-template-rows: 20% 80%;
     width: 100%;
     background: #999;
     height: 400px;
@@ -58,7 +60,7 @@ nav li{
 
 #fightLogDiv{
     height: 100%;
-    background: #8b7573;
+    background: #d1d9ff;
     overflow:scroll;
     overflow: hidden;
 }

@@ -18,32 +18,69 @@
             <h3 id="navHealth">health</h3>
         </div>
 
-        <div>div 3</div>
+        <div></div>
     </nav>
     <div id="contentArea">
             <div id="menu">
-                <button id="exploreBtn" class="btn">Explore!</button>
+                <div id="MainMenu">
+                    <div id="mmOptions">
+                        <button id="exploreBtn" class="btn">Explore</button>
+                        <button id="shopBtn" class="btn">Shop</button>
+                    </div>
+
+                    <div id="areasDiv" style="display: none">
+                        <!-- The elements get dynamically added, see areas.js -->
+                    </div>
+
+                    <div id="shopDiv" style="display: none">
+                        <!-- The elements get dynamically added, see shop.js -->
+                    </div>
+
+                    <div id="shopItemsDiv" style="display:none">
+
+                    </div>
+                </div>
             </div>
+
             <div id="midDiv">
+                <div id="exploreDiv" style="display:none">
+                    <div id="topAreaDiv" style="display:inherit">
+                        <!-- <h1 id="selectedArea" style="text-align: center;">Explore</h1> -->
+                        <button id="exploreAreaBtn" class="btn" style="display:none" >Explore!</button>
+                    </div>
 
-                <div id="fightScreen">
-                    <div>
-                        <h1 id="enemyHeader"></h1>
-                        <p id="enemyHeaderHealth"></p>
+                    
+                    <div id="encounterDiv" style="">
+                        <h1 id="encounterHeader" style="text-align:center"></h1>
+                        <p id="encounterHeaderInfo"></p>
+                    </div>
 
+                    <div id="fightScreen" style="display:none">   
+                        <button id="attackBtn" class="btn">Attack!</button>  
+                        <div id="fightLogDiv">
+                            <ul id="fightLog"></ul>
+                        </div>
                     </div>
                     
-                    <div id="fightLogDiv">
-                        <ul id="fightLog"></ul>
-                    </div>
-    
-                    <button id="attackBtn" class="btn">Attack!</button>
                 </div>
 
             </div>
+
             <div>
+                <button class="btn" id="playerCurrencyBtn">$</button>
+                <button class="btn" id="playerItemBtn">Items</button>
+                <button class="btn" id="playerWeaponBtn">Equipped Weapon: Fists</button>
             </div>
 
     </div>
-    <script src="game.js"></script>
+    <script src="lib/myLib.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/funk.js"></script>
+    <script src="js/areas.js"></script>
+    <script src="js/shop.js"></script>
+    <!-- <script src="js/potions.js"></script> -->
+    <script src="js/enemy.js"></script>
+    <script src="js/fightStage.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/functions.js"></script>
 </body>
