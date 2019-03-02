@@ -25,7 +25,9 @@ function getAreaBtns(){
     for (var i = 0; i < areaBtn.length; i++) { // loop through all area buttons
         var textContent;
         areaBtn[i].addEventListener('click', function(event){ // add event listeners to area buttons
+            
             topAreaDiv.style.display = "inherit";
+            encounterHeaderInfo.innerHTML= " ";
     
     
             //Check if player is allowed to enter area

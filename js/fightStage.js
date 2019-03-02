@@ -54,6 +54,7 @@ attackBtn.addEventListener("click", function(){
         
         encounterHeader.innerHTML = "Victory!";
         encounterHeaderInfo.innerHTML = "You gained " + xp + "xp and $" + moneyGain;
+        enableButtons();
         
     } else { 
         if (player.health - enemyAttack <= 0){
@@ -66,6 +67,7 @@ attackBtn.addEventListener("click", function(){
 
             areasDiv.style.display = "none";
             mmOptions.style.display = "inherit";
+            enableButtons();
 
 
 
@@ -80,7 +82,6 @@ attackBtn.addEventListener("click", function(){
         }
     }
     updateHealthBar();
-    enableButtons();
     updateGUI();
 
     while (logCount < fightLog.childElementCount) { /// Clear Fight Log
