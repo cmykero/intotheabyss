@@ -89,9 +89,8 @@ attackBtn.addEventListener("click", function(){
 
     while (logCount < fightLog.childElementCount) { /// Clear Fight Log
         
-        if(logCount>=2){
+        if(logCount>=2){ // Change the color for previous logs
             fightLog.childNodes[logCount].style.color = "grey";
-            // console.log();
         }
         logCount++
     }
