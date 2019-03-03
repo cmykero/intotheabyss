@@ -64,8 +64,6 @@ for (var i = 0; i < shopSectionBtn.length; i++) {
         textContent = document.createTextNode("Return");
         newReturn.appendChild(textContent);
         shopItemsDiv.appendChild(newReturn);
-        initShopReturnBtn();
-        initShopItemBtn();
 
         
         shopDiv.style.display = "none";
@@ -88,6 +86,8 @@ for (var i = 0; i < shopSectionBtn.length; i++) {
             shopItemsDiv.appendChild(itemBtn);
 
         }
+        initShopReturnBtn();
+        initShopItemBtn();
 
     });
 }
@@ -118,6 +118,7 @@ function initShopItemBtn(){
                                 player.currency -= shopIndex[1];
                                 updateGUI();
                                 setPlayerData();
+                                return;
                             } else {
                                 alert("You don't have enough money, go explore!")
                             }

@@ -1,11 +1,3 @@
-//Get elements
-var playerStats = document.getElementById("playerStats");
-var sbPlayerName = document.getElementById("sbPlayerName");
-var sbPlayerLevel = document.getElementById("sbPlayerLevel");
-var sbPlayerXP = document.getElementById("sbPlayerXP");
-var playerCurrencyBtn = document.getElementById("playerCurrencyBtn");
-
-
 //MAIN MENU
 var mmOptions = document.getElementById("mmOptions");
 var shopDiv = document.getElementById("shopDiv");
