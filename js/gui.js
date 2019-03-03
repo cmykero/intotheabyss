@@ -25,7 +25,7 @@ function updateGUI(){
     playerEquippedWeaponDesc.innerHTML = `Damage: ${player.weapon[2] + player.atk[0]} - ${player.weapon[2] + player.atk[1]}`;
 
 
-    if(`img/${player.weapon[0]}.png`){
+    if(!`img/${player.weapon[0]}.png`){
         playerEquippedWeapon.src = `img/${player.weapon[0]}.png`;
     }
  

@@ -58,6 +58,16 @@ var selectedShopSection;
 
 for (var i = 0; i < shopSectionBtn.length; i++) {
     shopSectionBtn[i].addEventListener('click', function(event){
+        
+        newReturn = document.createElement("button");
+        newReturn.classList.add("shopReturnBtn");
+        textContent = document.createTextNode("Return");
+        newReturn.appendChild(textContent);
+        shopItemsDiv.appendChild(newReturn);
+        initShopReturnBtn();
+        initShopItemBtn();
+
+        
         shopDiv.style.display = "none";
         shopItemsDiv.style.display = "inherit";
 
@@ -79,13 +89,6 @@ for (var i = 0; i < shopSectionBtn.length; i++) {
 
         }
 
-        newReturn = document.createElement("button");
-        newReturn.classList.add("shopReturnBtn");
-        textContent = document.createTextNode("Return");
-        newReturn.appendChild(textContent);
-        shopItemsDiv.appendChild(newReturn);
-        initShopReturnBtn();
-        initShopItemBtn();
     });
 }
 

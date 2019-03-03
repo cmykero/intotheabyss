@@ -12,13 +12,14 @@ var currentArea = undefined;
 let Areas = {
     cave: {
         lvlRequired: 0,
-        enemies: [
+        enemies: [ 
             ["Bat", 15, 3, 5, 3, 5, 6],
-            ["Ghoul", 25, 4, 7, 5, 10, 12]
+            // ["Giant Spider", 20, 6, 8, 7, 10, 12],
+            ["Ghoul", 25, 4, 7, 5, 10, 12],
         ],
         loot: {
             chance: 20,
-            chests:[ //CREATE A CHANCE
+            chests:[
                 ["Wooden Loot Box", 10, 15],
                 ["Stone Chest", 10, 15],
                 ["Quartz Chest", 10, 15]
@@ -75,8 +76,8 @@ let Areas = {
         },
         picture: 'background-image: url("http://coolvibe.com/wp-content/uploads/2012/07/Illustration-Rasmus-Berggreen-Into-the-Abyss.jpg")',
     },
-
 }
+
 
 var areaBtn;
 
