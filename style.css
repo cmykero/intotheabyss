@@ -41,28 +41,36 @@ nav li{
 }
 /*End Nav */
 
+#midDiv{
+    background-color: #d1d9ff94;
+    height: 500px;
+}
+
 #contentArea{
     padding-top: 50px;
     width: 100%;   
 }
 
 
-
+#encounterDiv{
+    background-color: #d1d9ff94;
+    height: 100%;
+}
 
 /*FIGHT SCREEN*/
 #fightScreen{
     display: grid;
     grid-template-rows: 20% 80%;
     width: 100%;
-    background: #999;
+    background: rgba(153, 153, 153, 0);
     height: 400px;
 }
 
 #fightLogDiv{
     height: 100%;
-    background: #d1d9ff;
     overflow:scroll;
     overflow: hidden;
+    background-color: #d1d9ff94;
 }
 
 #fightScreen h1, p{

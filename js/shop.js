@@ -8,6 +8,7 @@ let Shop = {
     potions:[
         ["Small Antidote", 10, 20],
         ["Small Potion", 20, 45],
+        ["Big Antidote", 50, 100]
     ],
 
     weapons:[
@@ -107,6 +108,7 @@ function initShopItemBtn(){
 
                                 player.currency -= shopIndex[1];
                                 updateGUI();
+                                setPlayerData();
                             } else {
                                 alert("You don't have enough money, go explore!")
                             }
@@ -121,6 +123,7 @@ function initShopItemBtn(){
                             alert("You purchased the " + selectedShopItem)
                             console.log(player);
                             updateGUI();
+                            setPlayerData();
                         } else {
                             alert("You don't have enough money, go explore!")
                         }

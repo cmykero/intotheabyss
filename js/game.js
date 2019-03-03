@@ -26,18 +26,10 @@ var playerWeaponBtn = document.getElementById("playerWeaponBtn");
 
 
 
-//ARRAYS
-// 0 = level, 1 = xp needed to level up, 2 max health for level
-
 
 
 
 window.onload=function(){
-    if(player.name == "Name"){
-        var newPlayer = prompt("What is your name traveller?");
-        player.name = newPlayer;
-    }
-
     updateHealthBar();
     updateGUI();
 }
@@ -60,10 +52,7 @@ exploreBtn.addEventListener("click", function(){ // If fight button is triggered
 });
 
 
-var areaBtn;
 getAreaBtns();
-
-
 
 
 shopBtn.addEventListener("click", function(){
@@ -73,8 +62,6 @@ shopBtn.addEventListener("click", function(){
     encounterHeader.innerHTML = "Shop";
     encounterHeaderInfo.innerHTML = "Select an Item!";
 });
-
-
 
 var lootChance;
 var goldBonus;
@@ -97,11 +84,12 @@ exploreAreaBtn.addEventListener("click", function(){
     lootChance = randomizer(0, 100);
 
     if (lootChance <= Areas[currentArea].loot.chance){ // check if player gets loot box
-        moneyGain = randomizer(Areas[currentArea].loot.chests[1], Areas[currentArea].loot.chests[2]);
+        moneyGain = randomizer(Areas[currentArea].loot.chests[0][1], Areas[currentArea].loot.chests[0][2]);
         player.currency += moneyGain;
-        encounterHeader.innerHTML = "You found a " + Areas[currentArea].loot.chests[0] + "!";
+        encounterHeader.innerHTML = "You found a " + Areas[currentArea].loot.chests[0][0] + "!";
         encounterHeaderInfo.innerHTML = "You found $" + moneyGain + "!";
         updateGUI();
+        setPlayerData();
     } else {
         fightStage();
     }
@@ -131,23 +119,3 @@ function updateInfo(xp){
 }
 
 
-var navXP = document.getElementById("navXP");  
-var navHealth = document.getElementById("navHealth");  
-
-
-function updateHealthBar(){
-    navHealth.innerHTML = `Health:<br>${player.health} / ${lvl[player.lvl][2]}`
-    healthPercent = percentor(player.health, lvl[player.lvl][2]);
-    navXP.style.background =`linear-gradient(to right, #7ac781 ${healthPercent}%, #f87f73 ${healthPercent}%)`;
-}
-
-function updateGUI(){
-    sbPlayerName.textContent ="Name: " + player.name;
-    sbPlayerLevel.textContent = "Level: "+ player.lvl;
-    sbPlayerXP.textContent = "XP: " + player.xp +  " /"+ lvl[player.lvl][1] ;
-    playerCurrencyBtn.innerHTML = `$${player.currency}`;
-
-    // damage = 
-    playerWeaponBtn.innerHTML = `Weapon: ${player.weapon[0]} Damage: ${player.weapon[2] + player.atk[0]} - ${player.weapon[2] + player.atk[1]}`
-    updateHealthBar();
-}

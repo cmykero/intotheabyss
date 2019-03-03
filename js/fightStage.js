@@ -24,9 +24,7 @@ function fightStage(){
     enemy.getEnemy();
 
     encounterHeader.innerHTML = randomEnemy.name; // change the header to the name of the enemy
-    encounterHeaderInfo.innerHTML = "Enemy Health: " + randomEnemy.health; // change the enemy health on header.
-
-    logger("  ");
+    encounterHeaderInfo.innerHTML = "Enemy Health: " + randomEnemy.health; // change the enemy health on header
 }
 
 
@@ -55,6 +53,8 @@ attackBtn.addEventListener("click", function(){
         encounterHeader.innerHTML = "Victory!";
         encounterHeaderInfo.innerHTML = "You gained " + xp + "xp and $" + moneyGain;
         enableButtons();
+        setPlayerData();
+        // updateGUI();
         
     } else { 
         if (player.health - enemyAttack <= 0){
@@ -67,7 +67,9 @@ attackBtn.addEventListener("click", function(){
 
             areasDiv.style.display = "none";
             mmOptions.style.display = "inherit";
+            midDiv.style = 'background-image: ""';
             enableButtons();
+            setPlayerData();
 
 
 
@@ -79,6 +81,7 @@ attackBtn.addEventListener("click", function(){
         
             logger("You dealt " + playerAttack + " damage!");
             player.health -= enemyAttack;
+            setPlayerData();
         }
     }
     updateHealthBar();
@@ -97,7 +100,9 @@ attackBtn.addEventListener("click", function(){
 function enableButtons(){
     for (var i = 0; i < areaBtn.length; i++) { //Enable buttons
         areaBtn[i].disabled = false;
-        returnBtn[i].disabled = false;
+        if(returnBtn[i]){
+            returnBtn[i].disabled = false;
+        }
     }
 }
 
