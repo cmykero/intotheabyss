@@ -19,9 +19,9 @@ let Areas = {
         loot: {
             chance: 20,
             chests:[ //CREATE A CHANCE
-            ["Wooden Loot Box", 10, 15],
-            ["Stone Chest", 10, 15],
-            ["Quartz Chest", 10, 15]
+                ["Wooden Loot Box", 10, 15],
+                ["Stone Chest", 10, 15],
+                ["Quartz Chest", 10, 15]
             ]
         },
         picture: 'background-image: url("http://3.bp.blogspot.com/-N7EpdPxfhhw/T0zLiujmqBI/AAAAAAAAAlQ/DVmfYjq0R_Y/s1600/cave.jpg")',
@@ -36,8 +36,8 @@ let Areas = {
         loot: {
             chance: 18,
             chests: [
-            ["Mossy Chest", 20,25],
-            ["Oak Loot Box", 20,25],
+                ["Mossy Chest", 20,25],
+                ["Oak Loot Box", 20,25],
             ]
         },
         picture: 'background-image: url("https://i.pinimg.com/originals/77/58/8a/77588af9fffb6ea8599a36af98410064.jpg")',
@@ -69,8 +69,8 @@ let Areas = {
         loot: {
             chance: 18,
             chests: [
-            ["Mossy Chest", 20,25],
-            ["Oak Loot Box", 20,25],
+                ["Mossy Chest", 20,25],
+                ["Oak Loot Box", 20,25],
             ]
         },
         picture: 'background-image: url("http://coolvibe.com/wp-content/uploads/2012/07/Illustration-Rasmus-Berggreen-Into-the-Abyss.jpg")',
@@ -86,6 +86,12 @@ function loadAreaButtons(){
     var newAreaBtn;
     var textContent;
     
+    newReturn = document.createElement("button");
+    newReturn.classList.add("returnBtn");
+    textContent = document.createTextNode("Return");
+    newReturn.appendChild(textContent);
+    areasDiv.appendChild(newReturn);
+    
     for (i in Areas){
         newAreaBtn = document.createElement("button");
         newAreaBtn.classList.add("areaBtn");
@@ -95,11 +101,6 @@ function loadAreaButtons(){
         areasDiv.appendChild(newAreaBtn);
     }
     
-    newReturn = document.createElement("button");
-    newReturn.classList.add("returnBtn");
-    textContent = document.createTextNode("Return");
-    newReturn.appendChild(textContent);
-    areasDiv.appendChild(newReturn);
 
     getAreaBtns();
 }

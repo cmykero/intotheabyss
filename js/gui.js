@@ -2,6 +2,13 @@ var navXP = document.getElementById("navXP");
 var navHealth = document.getElementById("navHealth");  
 
 
+
+//WEAPON
+var playerEquippedWeapon = document.getElementById("playerEquippedWeapon");  
+var playerEquippedWeaponTitle = document.getElementById("playerEquippedWeaponTitle");  
+var playerEquippedWeaponDesc = document.getElementById("playerEquippedWeaponDesc");  
+
+
 function updateHealthBar(){
     navHealth.innerHTML = `Health:<br>${player.health} / ${lvl[player.lvl][2]}`
     healthPercent = percentor(player.health, lvl[player.lvl][2]);
@@ -14,7 +21,13 @@ function updateGUI(){
     sbPlayerXP.textContent = "XP: " + player.xp +  " /"+ lvl[player.lvl][1] ;
     playerCurrencyBtn.innerHTML = `$${player.currency}`;
 
-    // damage = 
-    playerWeaponBtn.innerHTML = `Weapon: ${player.weapon[0]} Damage: ${player.weapon[2] + player.atk[0]} - ${player.weapon[2] + player.atk[1]}`
+    playerEquippedWeaponTitle.innerHTML = player.weapon[0];
+    playerEquippedWeaponDesc.innerHTML = `Damage: ${player.weapon[2] + player.atk[0]} - ${player.weapon[2] + player.atk[1]}`;
+
+
+    if(`img/${player.weapon[0]}.png`){
+        playerEquippedWeapon.src = `img/${player.weapon[0]}.png`;
+    }
+ 
     updateHealthBar();
 }

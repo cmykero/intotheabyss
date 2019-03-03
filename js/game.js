@@ -21,7 +21,6 @@ var attackBtn = document.getElementById("attackBtn");
 var encounterHeader = document.getElementById("encounterHeader");
 var fightLog = document.getElementById("fightLog");
 var encounterHeaderInfo = document.getElementById("encounterHeaderInfo"); 
-var playerWeaponBtn = document.getElementById("playerWeaponBtn"); 
 
 
 

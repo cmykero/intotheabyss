@@ -1,0 +1,64 @@
+#mainContainer{
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    padding: 5%;
+    height: 100%;
+}
+
+.backgroundImg{
+    z-index: 0;
+    width: 100%;
+}
+
+.gridItem{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gridItem span{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gridItem span h4 {
+    font-size: 2vw;
+}
+.gridItem span h5 {
+    font-size: 1.5vw;
+}
+
+.equippedItem{
+    width: 11vw;
+    max-width: 60px;
+    height: auto;
+    margin: 9%;
+}
+
+@media screen and (min-width: 900px){
+  
+
+    
+    .gridItem span h4 {
+        font-size: 1vw;
+    }
+    .gridItem span h5 {
+        font-size:.75vw;
+    }
+    
+    .equippedItem{
+        width: 3vw;
+        max-width: 50px;
+        height: auto;
+        margin: 9%;
+    }
+
+}

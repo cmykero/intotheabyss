@@ -88,6 +88,8 @@ nav li{
     position: relative;
 }
 
+/* #playerEquippmentContainer */
+
 @media screen and (min-width: 900px){
     #contentArea{
         width: 100%;

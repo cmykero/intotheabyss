@@ -2,7 +2,7 @@
 //0 = Name, 1 = price, 2 = buff
 
  // WEAPONS
-// 0 = ID, 1 = Name, 2 = Price
+// 0 = Name, 1 = Price, 2 = Damage, 3 = image
 
 let Shop = {
     potions:[
@@ -15,6 +15,12 @@ let Shop = {
         ["Stick", 10, 2],
         ["Bat", 20, 5], 
         ["Wooden Sword", 50, 15],
+        ["Metal Hammer", 100, 50],
+    ],
+    armor:[
+        ["Wooden Chest Plate", 10, 2],
+        ["Chest mail", 20, 5], 
+        ["Metal vest", 50, 15, "img/Wooden Sword.png"],
     ]
 };
 
@@ -28,6 +34,11 @@ loadShopSections();
 
 function loadShopSections(){
     
+    newReturn = document.createElement("button");
+    newReturn.classList.add("returnBtn");
+    textContent = document.createTextNode("Return");
+    newReturn.appendChild(textContent);
+    shopDiv.appendChild(newReturn);
     
     for (i in Shop){
         shopSectionBtn = document.createElement("button");
@@ -39,11 +50,6 @@ function loadShopSections(){
         // console.log(newAreaBtn);
     }
         
-    newReturn = document.createElement("button");
-    newReturn.classList.add("returnBtn");
-    textContent = document.createTextNode("Return");
-    newReturn.appendChild(textContent);
-    shopDiv.appendChild(newReturn);
 }
 
 
